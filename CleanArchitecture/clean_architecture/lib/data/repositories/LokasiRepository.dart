@@ -15,7 +15,7 @@ class LokasiRepository {
 //      return Album.fromJson(jsonDecode(response.body));
       final listInJson = jsonDecode(response.body) as List;
 
-      return LokasiListResponse(listInJson.map((e) => Lokasi.fromJson(e)));
+      return LokasiListResponse(listInJson.map((e) => Lokasi.fromJson(e)).toList());
     } else {
       // If the server did not return a 200 OK response,
       // then throw an exception.
